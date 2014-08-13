@@ -1,0 +1,27 @@
+{{#foreach posts}}
+<section class="post {{post_class}}">
+  <div class="post-content">
+    <h2 class="post-title call-out"><a href="{{url}}">{{{title}}}</a>
+    </h2>
+    <p>{{excerpt words="50"}} <a class="read-more" href="{{url}}"><em>read more&hellip;</em></a></p>
+
+    <div class="thoughts">
+    <span>Share your thoughts with us on</span> <a href="http://twitter.com/home?status=@pebblecode" target="_blank">twitter</a>
+    </div>
+  </div> {{!-- end .post-content --}}
+
+  <div class="post-meta">
+    <h4 class="author">{{author.name}}</h4>
+    <span class="date">{{date format="DD MMMM YYYY"}}</span>
+
+    <ul class="tags">
+      {{#foreach tags}}
+          <li><a href="{{url}}">{{name}}</a></li>
+      {{/foreach}}
+    </ul>
+  </div> {{!-- end .post-meta --}}
+</section> {{!-- end .post --}}
+{{/foreach}}
+
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}
