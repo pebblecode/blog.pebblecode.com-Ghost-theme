@@ -1,16 +1,27 @@
-# Casper
+# blog.pebblecode.com Ghost theme
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
+**Getting started**
 
-To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
+First download the existing blog content from Dropbox. See MD for details.
 
-## Copyright & License
+**Installing Ghost**
+* Pull down the Ghost repo `git clone https://github.com/TryGhost/Ghost.git`
+* Revert to Ghost V 0.0.5 `git reset --hard b6507bed9be699e039e127130b950814c7b79974`
+* Install Grunt `npm install -g grunt-cli`
+* Install Dependancies `npm install`
+* Build Assets `grunt init`
+* Start Ghost `npm start`
+* View Ghost at `http://localhost:2368`
 
-Copyright (c) 2013-2014 Ghost Foundation - Released under the MIT License.
+**Adding content**
+* Log into Ghost at `http://localhost:2368/ghost`
+* Create an Account
+* Navigate to `http://localhost:2368/ghost/debug/`
+* Under 'import' chose the file `pc-blog-posts.json` from the Dropbox download.
+* Copy contents of Dropbox 'archive' directory to `../content/images/archive`
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+**Install blog.pebblecode theme**
+* Clone this repo into `/content/themes/`
+* Restart Ghost if running
+* Log into Ghost at `http://localhost:2368/ghost`
+* Go to settings, Under theme select `blog.pebblecode.com Ghost theme - 0.0.1`
